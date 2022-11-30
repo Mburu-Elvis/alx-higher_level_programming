@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import random
-number = random.randint(-1000, 10000)
+number = random.randint(-10000, 10000)
 n = repr(number)
 last_digit = n[-1]
 last = int(last_digit)
