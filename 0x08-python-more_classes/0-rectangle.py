@@ -4,5 +4,4 @@
 # define class
 class Rectangle:
     """An empty Rectangle Class."""
-
     pass
