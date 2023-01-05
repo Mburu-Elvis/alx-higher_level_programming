@@ -56,9 +56,6 @@ class Rectangle:
 
         Represents the Rectangle with '#'.
         """
-        rect = []
-        for i in range(self.__height):
-            [rect.append("#") for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+        if self.width == 0 or self.height == 0:
+            return ""
+        return "\n".join(["#" * self.width] * self.height)
