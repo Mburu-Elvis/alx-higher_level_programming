@@ -7,6 +7,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initializes a new Rectangle.
+
         Args:
             width(int): The width of the new rectangle.
             height(int): The height of the new rectangle.
@@ -47,6 +48,5 @@ class Rectangle:
     def perimeter(self):
         """Returns the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return 2 * (self.__width + self.__height)
-
+            return (0)
+        return (2 * (self.__width + self.__height))
