@@ -14,7 +14,7 @@ class Rectangle:
         Args:
             width(int): The width of the new rectangle.
             height(int): The height of the new rectangle.
-        """
+      """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -61,7 +61,7 @@ class Rectangle:
         """
         if self.width == 0 or self.height == 0:
             return Rectangle.print_symbol
-        return "\n".join(["#" * self.width] * self.height)
+        return "\n".join([Rectangle.print_symbol * self.width] * self.height)
 
     def __repr__(self):
         """Return a string representation of the rectangle object."""
