@@ -60,7 +60,7 @@ class Rectangle:
         Represents the Rectangle with '#'.
         """
         if self.width == 0 or self.height == 0:
-            return Rectangle.print_symbol
+            return ""
         return "\n".join([Rectangle.print_symbol * self.width] * self.height)
 
     def __repr__(self):
