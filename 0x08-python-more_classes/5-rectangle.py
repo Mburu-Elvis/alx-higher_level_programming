@@ -67,4 +67,4 @@ class Rectangle:
 
     def __del__(self):
         """Returning a string when Rectangle is deleted."""
-        return "Bye rectangle..."
+        print("Bye rectangle...")
