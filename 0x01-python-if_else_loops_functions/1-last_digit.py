@@ -12,4 +12,4 @@ elif mod == 0:
     print('Last digit of', number, 'is', mod, 'and is 0')
 else:
     print('Last digit of', number, 'is', mod, end='')
-    print(' and is less than 6 and 0')
+    print(' and is less than 6 and not 0')
