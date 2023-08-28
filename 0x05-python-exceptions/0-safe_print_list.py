@@ -3,11 +3,12 @@
 def safe_print_list(my_list=[], x=0):
     '''Function that prints x elements of a list'''
 
-    try:
-        for i in range(x):
+    for i in range(x):
+        try:
             print(f"{my_list[i]}", end="")
-    except IndexError:
-        i -= 1
-    i += 1
+        except IndexError:
+            i -= 1
+            break
     print()
+    i += 1
     return (i)
