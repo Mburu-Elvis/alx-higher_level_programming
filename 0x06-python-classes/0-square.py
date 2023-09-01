@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 
-class Square:
-    '''A class that defines a square.
+"""A class square to define a square.
 
-    gives the details of a square.'''
+Documentation 101.
+
+"""
+class Square:
+    """A class that defines a square.
+
+    gives the details of a square.
+
+   """
     pass
