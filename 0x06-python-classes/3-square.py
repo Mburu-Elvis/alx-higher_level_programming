@@ -5,7 +5,7 @@
 class Square:
     """Definition of the class square."""
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         """Object initialzation at creation."""
 
         if not isinstance(size, int):
