@@ -26,13 +26,13 @@ class Rectangle:
     @property
     def height(self):
         """The height getter function."""
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
         return self.__height
 
     @height.setter
     def height(self, value):
         """set the height of the rectangle."""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
