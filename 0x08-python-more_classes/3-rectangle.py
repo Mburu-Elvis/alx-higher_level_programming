@@ -48,6 +48,7 @@ class Rectangle:
         return (2 * (self.width) + 2 * (self.height))
 
     def __str__(self):
+        """str function"""
         if self.height == 0 or self.width == 0:
             return ""
         rect = ""
@@ -59,4 +60,5 @@ class Rectangle:
         return rect
 
     def __repr__(self):
-         return f"<{type(self).__name__} object at {hex(id(self))}>"
+        """repr function"""
+        return f"<{type(self).__name__} object at {hex(id(self))}>"
