@@ -5,6 +5,7 @@
 class Rectangle:
     """Class definition"""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """the object instatiation function."""
         self.width = width
