@@ -6,7 +6,7 @@ class Rectangle:
     """Class definition"""
     def __init__(self, width=0, height=0):
         """the object instatiation function."""
-        if not isinstance(height, int):
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
