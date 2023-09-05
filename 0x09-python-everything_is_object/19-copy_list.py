@@ -1,3 +1,3 @@
+#!/usr/bin/python3
 def copy_list(l):
-    x = [i for i in l]
-    return x
+    return [i for i in l]
