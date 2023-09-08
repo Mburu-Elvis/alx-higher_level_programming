@@ -4,7 +4,7 @@
 
 def print_square(size):
     """function that prints a square with character '#'."""
-    if not isinstance(size, int):
+    if not isinstance(size, int) or size is None:
         if isinstance(size, float) and size < 0:
             raise TypeError("size must be an integer")
         raise TypeError("size must be an integer")
