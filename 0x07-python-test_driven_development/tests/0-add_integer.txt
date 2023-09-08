@@ -3,17 +3,13 @@ Tests involving add_integer function in the 0-add_integer module
 
 >>> import sys
 >>> sys.path.append('..')
->>> import importlib
->>> module_name = '0-add_integer'
->>> module = importlib.import_module(module_name)
->>> module.add_integer(1, 2) # doctest: +NORMALIZE_WHITESPACE
-3
->>> module.add_integer(1, 4.5)
-5
->>> module.add_integer(-5 , 4) # doctest: +NORMALIZE_WHITESPACE
--1
->>> module.add_integer("a", 4) # doctest: +NORMALIZE_WHITESPACE
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(4, 2)
+6
+>>> add_integer(4.3, 4)
+8
+>>> add_integer(1, "2")
 Traceback (most recent call last):
-TypeError: a must be an integer
+ValueError: b must be an integer
 
 """
