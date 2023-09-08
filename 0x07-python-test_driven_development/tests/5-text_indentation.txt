@@ -1,3 +1,5 @@
+Test file for function text_indentation
+
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("hello. World: Again?")
 hello.
@@ -46,3 +48,7 @@ Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation("Holberton.School")
+Holberton.
+<BLANKLINE>
+School

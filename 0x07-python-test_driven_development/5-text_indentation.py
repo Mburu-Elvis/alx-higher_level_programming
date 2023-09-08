@@ -8,11 +8,11 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     prev = False
     for char in text:
-        if text[0] == " " or prev == True:
+        if text[0] == " " or (prev == True and char == " "):
             prev = False
             continue
-        print(char, end="")
         prev = False
+        print(char, end="")
         if char == '.' or char == '?' or char == ':':
             print("\n")
             prev = True
