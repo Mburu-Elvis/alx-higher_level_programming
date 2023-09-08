@@ -33,3 +33,7 @@ TypeError: div must be a number
 >>> div = float('inf')
 >>> matrix_divided(matrix, div)
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+>>> matrix = [[1, 2, 3], [4, float('inf'), 5], [6, 7, 8]]
+>>> div = float('inf')
+>>> matrix_divided(matrix, div)
+[[0.0, 0.0, 0.0], [0.0, nan, 0.0], [0.0, 0.0, 0.0]]
