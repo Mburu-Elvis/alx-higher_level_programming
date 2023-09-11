@@ -1,0 +1,14 @@
+Tests on MyList class that inherits from list
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(29)
+>>> my_list.append(23)
+>>> my_list.append(21)
+>>> print(my_list)
+[3, 29, 23, 21]
+>>> my_list.print_sorted()
+[3, 21, 23, 29]
+>>> print(my_list)
+[3, 29, 23, 21]
