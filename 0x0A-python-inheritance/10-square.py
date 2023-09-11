@@ -8,8 +8,8 @@ class Square(Rectangle):
     def __init__(self, size):
         """object instantiation."""
         self.integer_validator("size", size)
-        self.__size = size
         Rectangle.__init__(self, size, size)
+        self.__size = size
 
     def area(self):
         """returns the area of the square"""
