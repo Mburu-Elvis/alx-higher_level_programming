@@ -1,0 +1,21 @@
+Tests for function is_kind_of_class
+
+>>> is_kind_of_class = __import__('3-is_kind_of_class').is_kind_of_class
+>>> a = 3.5
+>>> is_kind_of_class(a, float)
+True
+>>> is_kind_of_class(a, int)
+False
+>>> a = 3
+>>> is_kind_of_class(a, int)
+True
+>>> is_kind_of_class(a, float)
+False
+>>> a = 3
+>>> is_kind_of_class(a, float)
+False
+>>> b = 1
+>>> is_kind_of_class(a, int)
+True
+>>> is_kind_of_class(a, float)
+False
