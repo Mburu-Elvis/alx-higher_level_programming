@@ -1,0 +1,17 @@
+Tests on inherits_from
+
+>>> inherits_from = __import__('4-inherits_from').inherits_from
+>>> a = True
+>>> inherits_from(a, int)
+True
+>>> inherits_from(a, bool)
+False
+>>> inherits_from(a, object)
+True
+>>> a = 5
+>>> inherits_from(a, object)
+True
+>>> inherits_from(a, bool)
+True
+>>> inherits_from(a, int)
+False
