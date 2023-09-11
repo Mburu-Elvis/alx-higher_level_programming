@@ -1,0 +1,10 @@
+Tests of class Square attributes and methods
+
+>>> Square = __import__('11-square').Square
+>>> 
+>>> s = Square(13)
+>>> 
+>>> print(s)
+[Square] 13/13
+>>> print(s.area())
+169
