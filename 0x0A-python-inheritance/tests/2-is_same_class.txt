@@ -1,0 +1,16 @@
+Tests for is_same_class
+
+>>> is_same_class = __import__('2-is_same_class').is_same_class
+>>> b = 5.9
+>>> is_same_class(b, int)
+False
+>>> is_same_class(b, float)
+True
+>>> is_same_class("hello", str)
+True
+>>> is_same_class(1, str)
+False
+>>> is_same_class([3, 4], str)
+False
+>>> is_same_class([3, 4], list)
+True
