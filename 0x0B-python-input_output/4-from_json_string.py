@@ -5,5 +5,4 @@ import json
 
 def from_json_string(my_str):
     """Function that returns an object rep in JSON"""
-    my_str = json.loads(my_str)
-    
+    return json.loads(my_str)
