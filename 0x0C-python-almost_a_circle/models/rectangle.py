@@ -84,6 +84,30 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
+    def update(self, *args):
+        """Method that assigns an argument to each attribute."""
+        no_args = len(args)
+        if no_args == 1:
+            self.id = args[0]
+        elif no_args == 2:
+            self.id = args[0]
+            self.width = args[1]
+        elif no_args == 3:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+        elif no_args == 4:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+        else:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+
     def __str__(self):
         """the str method of Rectangle class."""
         x = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
