@@ -8,39 +8,26 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """class Square constructor."""
         super().__init__(size, size, x, y, id=id)
-        self.width = size
-        self.height = size
+        self.size = size
 
     def __str__(self):
         """str method for class Square."""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
-    def width(self):
+    def size(self):
         """method to get the size of the square."""
-        return self.__width
+        return self.width
 
-    @width.setter
-    def width(self, value):
+    @size.setter
+    def size(self, value):
         """seter method for the width and height."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value <= 0:
             raise ValueError("size must be > 0")
         self.width = value
-
-    @property
-    def height(self):
-        """return the height."""
-        return self.height
-
-    @height.setter
-    def height(self, value):
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        if value <= 0:
-            raise ValueError("size must be > 0")
-        self.__height = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """Update method that assign attributes."""
@@ -58,3 +45,12 @@ class Square(Rectangle):
             self.x = args[2]
         if no_args >= 4:
             self.y = args[3]
+
+    def to_dictionary(self):
+        """method to return a dictionary of Square attributes"""
+        my_dict = {}
+        my_dict['id'] = self.id
+        my_dict['size'] = self.size
+        my_dict['x'] = self.x
+        my_dict['y'] = self.y
+        return my_dict
