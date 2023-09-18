@@ -31,3 +31,10 @@ class Base:
         json_string = cls.to_json_string(dict_list)
         with open(filename, 'w') as file:
             file.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """method returning the list of JSON rep json string."""
+        if json_string is None:
+            return []
+        return json.loads(json_string)
