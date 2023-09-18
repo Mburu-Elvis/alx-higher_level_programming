@@ -34,12 +34,12 @@ class TestRectangle(unittest.TestCase):
         self.assertNotEqual(rect1, rect2)
         self.assertEqual(rect1, rect3)
 
-    def test_updat(self):
+    def test_update(self):
         """method to tests update method of class Rectangle."""
         r1 = Rectangle(10, 10, 10, 10)
         r1.update(89)
         self.assertEqual(r1.id, 89)
-        r2 = Rectangle(id=99)
+        r2 = Rectangle(12, 82, id=99)
         self.assertEqual(r2.id, 99)
 
 if __name__ == "__main__":
