@@ -75,7 +75,11 @@ class Rectangle(Base):
 
     def display(self):
         """Method to display the rectangle."""
+        for l in range(self.y):
+            print()
         for i in range(self.height):
+            for j in range(self.x):
+                print(" ", end="")
             for k in range(self.width):
                 print("#", end='')
             print()
@@ -84,4 +88,4 @@ class Rectangle(Base):
         """the str method of Rectangle class."""
         x = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
         y = f"{self.width}/{self.height}"
-        return x + y
+        return x + y 
