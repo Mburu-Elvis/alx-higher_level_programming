@@ -8,25 +8,39 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """class Square constructor."""
         super().__init__(size, size, x, y, id=id)
+        self.width = size
+        self.height = size
 
     def __str__(self):
         """str method for class Square."""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
-    def size(self):
+    def width(self):
         """method to get the size of the square."""
-        return self.width
+        return self.__width
 
-    @size.setter
-    def size(self, value):
+    @width.setter
+    def width(self, value):
         """seter method for the width and height."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value <= 0:
             raise ValueError("size must be > 0")
         self.width = value
-        self.height = value
+
+    @property
+    def height(self):
+        """return the height."""
+        return self.height
+
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value <= 0:
+            raise ValueError("size must be > 0")
+        self.__height = value
 
     def update(self, *args, **kwargs):
         """Update method that assign attributes."""

@@ -114,6 +114,7 @@ class Rectangle(Base):
         my_dict['x'] = self.x
         my_dict['y'] = self.y
         return my_dict
+
     def __str__(self):
         """the str method of Rectangle class."""
         x = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
