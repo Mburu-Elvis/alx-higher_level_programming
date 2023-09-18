@@ -39,6 +39,8 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(10, 10, 10, 10)
         r1.update(89)
         self.assertEqual(r1.id, 89)
+        r2 = Rectangle(id=99)
+        self.assertEqual(r2.id, 99)
 
 if __name__ == "__main__":
     unittest.main()

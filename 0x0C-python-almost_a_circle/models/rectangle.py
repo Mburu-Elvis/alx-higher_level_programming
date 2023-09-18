@@ -84,9 +84,14 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Method that assigns an argument to each attribute."""
         no_args = len(args)
+        if not args:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+            return
         if no_args == 1:
             self.id = args[0]
         elif no_args == 2:
