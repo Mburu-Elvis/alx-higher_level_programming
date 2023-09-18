@@ -107,8 +107,13 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Method that returns the dictionary representation of Rectangle."""
-        return self.__dict__
-
+        my_dict = {}
+        my_dict['id'] = self.id
+        my_dict['width'] = self.width
+        my_dict['height'] = self.height
+        my_dict['x'] = self.x
+        my_dict['y'] = self.y
+        return my_dict
     def __str__(self):
         """the str method of Rectangle class."""
         x = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
