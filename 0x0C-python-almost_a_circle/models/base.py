@@ -42,6 +42,19 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes set."""
-        rect = cls(width=1, height=1)
+        rect = cls(1, 1)
         rect.update(**dictionary)
         return rect
+
+    @classmethod
+    def load_from_file(cls):
+        """method that returns a list of instances."""
+        filename = f"{cls.__name__}.json"
+        try:
+            with open(filename, "r") as myfile:
+                my_json = myfile.read()
+        except FileNotFoundError:
+            return []
+        json_data = cls.from_json_string(my_json)
+        instances = [cls.create(**my_data) for my_data in json_data]
+        return instances
