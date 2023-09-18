@@ -91,6 +91,8 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+                else:
+                    return
             return
         if no_args == 1:
             self.id = args[0]
