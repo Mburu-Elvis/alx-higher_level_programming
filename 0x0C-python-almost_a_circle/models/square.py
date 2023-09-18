@@ -4,6 +4,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """Class Square whose base class is Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
         """class Square constructor."""
         super().__init__(id=id, width=size, height=size, x=x, y=y)
