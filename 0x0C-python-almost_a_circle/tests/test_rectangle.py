@@ -26,5 +26,13 @@ class TestRectangle(unittest.TestCase):
         area = rect.area()
         self.assertEqual(area, 12)
 
+    def test_str(self):
+        """Method to test the __str__ method of Rectangle."""
+        rect1 = Rectangle(2, 4, 5, 8, 2)
+        rect2 = Rectangle(2, 4, 2, 8)
+        rect3 = rect1
+        self.assertNotEqual(rect1, rect2)
+        self.assertEqual(rect1, rect3)
+
 if __name__ == "__main__":
     unittest.main()
