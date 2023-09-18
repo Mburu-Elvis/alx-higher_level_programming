@@ -9,6 +9,7 @@ if __name__ == "__main__":
     print(s1.size)
     s1.size = 10
     print(s1)
+    print(s1.size)
 
     try:
         s1.size = "9"

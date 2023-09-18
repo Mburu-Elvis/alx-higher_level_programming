@@ -7,7 +7,7 @@ class Square(Rectangle):
     """Class Square whose base class is Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
         """class Square constructor."""
-        super().__init__(id=id, width=size, height=size, x=x, y=y)
+        super().__init__( size, size, x, y, id=id)
 
     def __str__(self):
         """str method for class Square."""
@@ -24,6 +24,6 @@ class Square(Rectangle):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value <= 0:
-            return ValueError("size must be > 0")
-        self.__width = value
-        self.__height = value
+            raise ValueError("size must be > 0")
+        self.width = value
+        self.height = value
