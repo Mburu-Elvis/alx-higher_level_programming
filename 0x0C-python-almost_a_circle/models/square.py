@@ -8,7 +8,6 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """class Square constructor."""
         super().__init__(size, size, x, y, id=id)
-        self.size = size
 
     def __str__(self):
         """str method for class Square."""
@@ -37,23 +36,11 @@ class Square(Rectangle):
                     setattr(self, key, value)
             return
         no_args = len(args)
-        if no_args == 1:
+        if no_args >= 1:
             self.id = args[0]
-        elif no_args == 2:
-            self.id = args[0]
-            self.width = args[1]
-        elif no_args == 3:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-        elif no_args == 4:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-        else:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
+        if no_args >= 2:
+            self.size = args[1]
+        if no_args >= 3:
+            self.x = args[2]
+        if no_args >= 4:
+            self.y = args[3]
