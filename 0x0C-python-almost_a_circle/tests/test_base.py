@@ -57,5 +57,12 @@ class TestBase(unittest.TestCase):
         rect = Rectangle.load_from_file()
         self.assertEqual(rect[0].height, r1.height)
 
+    def test_json_string(self):
+        """method to test from_json_string"""
+        x = [1, 3, 4]
+        x_str = Base.to_json_string(x)
+        y = Base.from_json_string(x_str)
+        self.assertEqual(x, y)
+
 if __name__ == "__main__":
     unittest.main()
