@@ -49,5 +49,13 @@ class TestBase(unittest.TestCase):
         rect = Rectangle.load_from_file()
         self.assertEqual(rect[0].id , r1.id)
 
+    def test_save_to_file(self):
+        """method to test save_to_file method Base class."""
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+        rect = Rectangle.load_from_file()
+        self.assertEqual(rect[0].height, r1.height)
+
 if __name__ == "__main__":
     unittest.main()
