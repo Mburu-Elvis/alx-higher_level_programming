@@ -40,5 +40,14 @@ class TestBase(unittest.TestCase):
         rect = Rectangle.create(**dict1)
         self.assertEqual(rect.width, 3)
 
+    def test_load_from_file(self):
+        """method to test load_from_file metho of Base class."""
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        list_rectangles = [r1, r2]
+        Rectangle.save_to_file(list_rectangles)
+        rect = Rectangle.load_from_file()
+        self.assertEqual(rect[0].id , r1.id)
+
 if __name__ == "__main__":
     unittest.main()
