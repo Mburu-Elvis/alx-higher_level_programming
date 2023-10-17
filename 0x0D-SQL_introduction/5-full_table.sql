@@ -1,2 +1,2 @@
 -- script printing the full description of a table
-DESCRIBE first_table;
+SHOW COLUMNS FROM first_table;
