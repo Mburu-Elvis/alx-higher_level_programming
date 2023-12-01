@@ -11,6 +11,7 @@ def fetch_url():
     with urllib.request.urlopen(req) as response:
         headers = response.read().decode('utf-8')
     lines = headers.split('\n')
+    print('Body response:')
     for key in lines:
         print(f'\t{key}')
 
