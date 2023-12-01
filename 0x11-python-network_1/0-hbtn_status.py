@@ -9,11 +9,11 @@ def fetch_url():
     """function that fetches a URL"""
     req = urllib.request.Request(url)
     with urllib.request.urlopen(req) as response:
-        headers = response.read().decode('utf-8')
-    lines = headers.split('\n')
+        body = response.read()
     print('Body response:')
-    for key in lines:
-        print(f'\t{key}')
+    print(f'\t- type: {type(body)}')
+    print(f'\t- content: {body}')
+    print(f'\t- utf8 content: {body.decode("utf-8")}')
 
 
 if __name__ == '__main__':
