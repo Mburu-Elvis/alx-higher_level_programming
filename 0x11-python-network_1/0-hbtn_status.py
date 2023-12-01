@@ -2,8 +2,9 @@
 """ a script that fetches a URL"""
 import urllib.request
 
-
 url = 'https://alx-intranet.hbtn.io/status'
+
+
 def fetch_url():
     """function that fetches a URL"""
     req = urllib.request.Request(url)
