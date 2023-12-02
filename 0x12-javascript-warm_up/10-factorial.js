@@ -2,11 +2,12 @@
 const argv = process.argv;
 const num = parseInt(argv[2]);
 function factorial (n) {
-  let fact = 1;
-  while (n > 0) {
-    fact = fact * n;
-    n--;
+  if (n === 1) {
+    return (1);
   }
-  console.log(fact);
+  if (isNaN(n)) {
+    return (1);
+  }
+  return (n * (factorial(n - 1)));
 }
-factorial(num);
+console.log(factorial(num));
