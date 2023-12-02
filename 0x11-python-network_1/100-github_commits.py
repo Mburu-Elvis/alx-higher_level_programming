@@ -14,7 +14,7 @@ if __name__ == "__main__":
         data = response.json()
         counter = 0
         for commit in data:
-            if counter == 0:
+            if counter == 10:
                 break
             sha = commit['sha']
             author = commit['commit']['author']['name']
