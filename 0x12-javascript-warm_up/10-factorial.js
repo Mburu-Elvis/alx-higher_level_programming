@@ -1,9 +1,12 @@
 #!/usr/bin/node
 const argv = process.argv;
-let num = parseInt(argv[2]);
-let fact = 1;
-while (num > 0) {
-  fact = fact * num;
-  num--;
+const num = parseInt(argv[2]);
+function factorial (n) {
+  let fact = 1;
+  while (n > 0) {
+    fact = fact * n;
+    n--;
+  }
+  console.log(fact);
 }
-console.log(fact);
+factorial(num);
