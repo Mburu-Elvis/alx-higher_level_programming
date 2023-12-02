@@ -11,7 +11,7 @@ if (argv.length === 2 || argv.length === 3) {
   }
 
   for (let i = 4; i < argv.length; i++) {
-    let num = parseInt(argv[i]);
+    const num = parseInt(argv[i]);
     if (num > biggest) {
       second = biggest;
       biggest = num;
