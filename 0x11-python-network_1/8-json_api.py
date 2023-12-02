@@ -15,7 +15,7 @@ if __name__ == "__main__":
     try:
         res_json = response.json()
         if res_json:
-            print(f'[{res_json[id]}] {res_json[name]}')
+            print(f'[{res_json["id"]}] {res_json["name"]}')
         else:
             print("No result")
     except:
