@@ -6,17 +6,15 @@ if (argv.length === 2 || argv.length === 3) {
   let biggest = parseInt(argv[3]);
   let second = parseInt(argv[2]);
   if (biggest < second) {
-    const temp = second;
     second = biggest;
-    biggest = temp;
+    biggest = parseInt(argv[2]);
   }
 
   for (let i = 4; i < argv.length; i++) {
     let num = parseInt(argv[i]);
     if (num > biggest) {
-      let temp2 = biggest;
+      second = biggest;
       biggest = num;
-      second = temp2;
     } else if (num > second && num !== biggest) {
       second = num;
     }
