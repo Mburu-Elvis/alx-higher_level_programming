@@ -11,7 +11,7 @@ class Rectangle {
     for (let i = 0; i < this.height; i++) {
       let row = '';
       for (let k = 0; k < this.width; k++) {
-        row = row.concat('#');
+        row = row.concat('X');
       }
       console.log(row);
     }
