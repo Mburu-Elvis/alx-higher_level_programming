@@ -19,8 +19,11 @@ if __name__ == "__main__":
             host='localhost',
             port=3306
         )
-    query = "SELECT * FROM states WHERE states.name LIKE 'N%'
-    ORDER BY states.id ASC"
+    query = """
+    SELECT * FROM states
+    WHERE states.name LIKE 'N%'
+    ORDER BY states.id ASC
+    """
     cursor = connection.cursor()
     cursor.execute(query)
     rows = cursor.fetchall()
