@@ -17,4 +17,3 @@ if __name__ == '__main__':
     for row in rows:
         print(f"({row[0]}, '{row[1]}')")
         c.close()
-        #db.close()
