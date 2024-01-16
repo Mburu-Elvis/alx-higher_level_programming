@@ -3,17 +3,16 @@
 import sys
 import MySQLdb
 
+if __name__ == '__main__':
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
 
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
-
-db = MySQLdb.connect(user=username, password=password, database=database)
-c = db.cursor()
-c.execute("""SELECT id, name FROM states ORDER BY states.id ASC""")
-rows = c.fetchall()
-
-for row in rows:
-    print(f"({row[0]}, '{row[1]}')")
-c.close()
-db.close()
+    db = MySQLdb.connect(user=username, password=password, database=database)
+    c = db.cursor()
+    c.execute("""SELECT id, name FROM states ORDER BY states.id ASC""")
+    rows = c.fetchall()
+    for row in rows:
+        print(f"({row[0]}, '{row[1]}')")
+        c.close()
+        db.close()
