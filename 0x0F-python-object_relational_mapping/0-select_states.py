@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """script that lists all states from the database"""
-import sys
-import MySQLdb
+
 
 if __name__ == '__main__':
+    """makes the code not execute when imported"""
+    import sys
+    import MySQLdb
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
