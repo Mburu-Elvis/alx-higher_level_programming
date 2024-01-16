@@ -18,7 +18,7 @@ if __name__ == '__main__':
     cursor = connection.cursor()
     query = """
     SELECT * FROM states
-    WHERE states.name = '{}'
+    WHERE BINARY states.name = '{}'
     ORDER BY states.id ASC""".format(state_name)
     cursor.execute(query)
     rows = cursor.fetchall()
