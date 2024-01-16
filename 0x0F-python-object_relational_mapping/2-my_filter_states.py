@@ -18,8 +18,8 @@ if __name__ == '__main__':
     cursor = connection.cursor()
     query = """
     SELECT * FROM states
-    WHERE states.name = '%s'
-    ORDER BY states.id ASC""" % (state_name)
+    WHERE states.name = '{}'
+    ORDER BY states.id ASC""".format(state_name)
     cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
