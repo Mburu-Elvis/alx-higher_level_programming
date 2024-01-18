@@ -31,6 +31,8 @@ if __name__ == "__main__":
     cursor.execute(query)
     rows = cursor.fetchall()
     i = 0
+    if len(rows) == 0:
+        print()
     for row in rows:
         if i < (len(rows) - 1):
             print(f"{row[0]}, ", end="")
