@@ -22,10 +22,7 @@ if __name__ == "__main__":
     try:
         query = session.query(State).order_by(State.id)
         query.all()
-        try:
-            result = query.first()
-            print(f"{result.id}: {result.name}")
-        except Exception as e:
-            pass
+        result = query.first()
+        print(f"{result.id}: {result.name}")
     except Exception as e:
         pass
