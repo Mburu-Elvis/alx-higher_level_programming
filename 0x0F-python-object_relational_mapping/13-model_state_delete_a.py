@@ -20,7 +20,7 @@ if __name__ == "__main__":
     engine = create_engine(query_engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(State).filter(State.name.ilike('%a%')):
+    for instance in session.query(State).filter(State.name.ilike('%a%')).all():
         session.delete(instance)
     session.commit()
     session.close()
