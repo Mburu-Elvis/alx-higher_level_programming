@@ -6,7 +6,7 @@ Usage:
 """
 if __name__ == "__main__":
     from model_state import State, Base
-    from sqlalchemy import create_engine, desc
+    from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
     from sys import argv
 
@@ -18,6 +18,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     result = session.query(State).filter(State.name.like('%a%')).\
-        order_by(desc(State.id)).all()
+        order_by(State.id).all()
     for row in result:
         print(f"{row.id}: {row.name}")
