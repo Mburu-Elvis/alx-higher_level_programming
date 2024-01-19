@@ -19,10 +19,13 @@ if __name__ == "__main__":
     engine = create_engine(query)
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(State).order_by(State.id)
-    query.all()
     try:
-        result = query.first()
-        print(f"{result.id}: {result.name}")
+        query = session.query(State).order_by(State.id)
+        query.all()
+        try:
+            result = query.first()
+            print(f"{result.id}: {result.name}")
+        except Exception as e:
+            pass
     except Exception as e:
         pass
