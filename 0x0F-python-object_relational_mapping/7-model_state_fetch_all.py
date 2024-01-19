@@ -1,13 +1,18 @@
 #!/usr/bin/python3
-"""script listing all State objects from hbtn_0e_6_usa database
+"""
+script listing all State objects from hbtn_0e_6_usa database.
 
-the module receive 3 arguments that are used for processing"""
+the module receive 3 command-line arguments that are used for processing.
+
+Usage:
+    ./7-model_state_fetch_all.py <username> <password> <database_name>
+"""
+
+
 from sys import argv
-import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
-"""Demo doc"""
 
 username = argv[1]
 pwd = argv[2]
