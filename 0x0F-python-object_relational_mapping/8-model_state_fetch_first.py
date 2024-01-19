@@ -25,4 +25,4 @@ if __name__ == "__main__":
         result = query.first()
         print(f"{result.id}: {result.name}")
     except Exception as e:
-        pass
+        print("Nothing")
