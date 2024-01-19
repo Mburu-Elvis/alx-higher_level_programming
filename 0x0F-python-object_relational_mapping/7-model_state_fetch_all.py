@@ -15,5 +15,5 @@ engine = create_engine(f"mysql+mysqldb://{username}:{pwd}@localhost:3306/{db}")
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
-for instance in session.query(State).order_by(State.id):
+for instance in session.query(State).order_by(State.id).all():
     print(f'{instance.id} : {instance.name}')
