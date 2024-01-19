@@ -21,5 +21,8 @@ if __name__ == "__main__":
     session = Session()
     query = session.query(State).order_by(State.id)
     query.all()
-    result = query.first()
-    print(f"{result.id}: {result.name}")
+    try:
+        result = query.first()
+        print(f"{result.id}: {result.name}")
+    except Exception as e:
+        print()
